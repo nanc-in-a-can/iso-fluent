@@ -56,7 +56,8 @@
 
     *xo {|xos|
         ^{|fluentCan, def|
-            var mappings = IsoFluent.prXoMakeMappings(xos, fluentCan.tempos.size);
+            var xos_ = if(xos.isNil || xos == "", {"x"}, {xos}); // make sure we have a valid xo string... TODO improve this.
+            var mappings = IsoFluent.prXoMakeMappings(xos_, fluentCan.tempos.size);
             var transps = IsoFluent.prXoMakeTranspFns(mappings.notes);
             var maybeNewCan = if(def.isNil.not, {fluentCan.copy.def(def ? fluentCan.def).debug("new")}, {fluentCan});
             maybeNewCan.compTransps(transps);
