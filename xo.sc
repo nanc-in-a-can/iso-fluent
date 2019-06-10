@@ -59,7 +59,7 @@
             var mappings = IsoFluent.prXoMakeMappings(xos, fluentCan.tempos.size);
             var transps = IsoFluent.prXoMakeTranspFns(mappings.notes);
             var maybeNewCan = if(def.isNil.not, {fluentCan.copy.def(def ? fluentCan.def).debug("new")}, {fluentCan});
-            maybeNewCan.transps(transps);
+            maybeNewCan.compTransps(transps);
             maybeNewCan;
         };
     }
