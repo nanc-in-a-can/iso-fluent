@@ -4,6 +4,26 @@ Helper functions for FluentCan `.apply`
 
 This repository is a work in progress. 
 
+## Installation
+## Using git (recommended)
+If you have `git` installed (highly recommended, https://git-scm.com/downloads), the easiest way to install this software is by compiling this lines in the SuperCollider IDE:
+
+```supercollider
+Quarks.install("https://github.com/nanc-in-a-can/iso-fluent.git");
+```
+
+Then you need to recompile the class library. In the menu bar: `Language > Recompile Class Library`
+
+
+### Manual download
+Otherwise you can follow this guide to find the paths in which you may install this software: http://doc.sccode.org/Guides/UsingExtensions.html
+
+For that you will need to download this repository.
+[Click here](https://github.com/nanc-in-a-can/fluent-can/archive/master.zip) and save the zip file wherever you want.
+
+If you do not have `nanc-in-a-can/canon-generator` installed, you will have to the same with [this repo](https://github.com/nanc-in-a-can/canon-generator/archive/master.zip) .
+
+
 ## xo
 Allows for an isorhythmic selection of notes that will play or not in each voice. 
 
