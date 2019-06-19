@@ -36,7 +36,7 @@
     }
 
     *prXoMakeTranspFns {|mappingsNotes|
-        ^mappingsNotes.collect({|voice| "runs".postln;_*voice})
+        ^mappingsNotes.collect({|voice| _*voice})
     }
 
     *prXoMakeMappings {|soundstring, totalVoices|
@@ -57,7 +57,7 @@
     *xo {|xos|
         ^{|fluentCan, def|
             var xos_ = if(xos.isNil || xos == "", {"x"}, {xos}); // make sure we have a valid xo string... TODO improve this.
-            var mappings = IsoFluent.prXoMakeMappings(xos_, fluentCan.tempos.size).debug("mapping notes");
+            var mappings = IsoFluent.prXoMakeMappings(xos_, fluentCan.tempos.size);
             var transps = IsoFluent.prXoMakeTranspFns(mappings.notes);
             fluentCan.compTransps(transps);
         };
