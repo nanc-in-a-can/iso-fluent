@@ -9,6 +9,7 @@ This repository is a work in progress.
 If you have `git` installed (highly recommended, https://git-scm.com/downloads), the easiest way to install this software is by compiling this lines in the SuperCollider IDE:
 
 ```supercollider
+Quarks.install("wslib"); // this lib is necessary for the correct functioning of IsoFluent
 Quarks.install("https://github.com/nanc-in-a-can/iso-fluent.git");
 ```
 
